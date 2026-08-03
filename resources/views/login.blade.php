@@ -79,7 +79,7 @@
         </div>
 
         <div class="hidden lg:flex w-1/2 bg-fpeb-orange items-center justify-center p-12">
-            <img src="{{ asset('assets\img\auth.png') }}"
+            <img src="{{ asset('assets/img/auth.png') }}"
                  alt="Illustration"
                  class="w-4/5 h-auto max-h-[80vh] object-contain">
         </div>

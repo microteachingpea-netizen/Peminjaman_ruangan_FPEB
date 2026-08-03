@@ -53,7 +53,7 @@
         
         <div class="max-w-7xl ml-6 md:ml-20 mr-auto py-5 flex items-center gap-4">
             <div class="flex items-center gap-2 shrink-0">
-                <img src="{{ asset('assets\img\download.png') }}" alt="Logo UPI FPEB" class="h-14 w-auto" onerror="this.style.display='none'">
+<img src="{{ asset('assets/img/download.png') }}" alt="Logo UPI FPEB" class="h-14 w-auto" onerror="this.style.display='none'">
             </div>
 
             <div>
@@ -71,7 +71,7 @@
     <section class="relative overflow-hidden min-h-[85vh] flex items-center">
 
         <div class="absolute inset-0">
-            <img src="{{ asset('assets\img\DEJJSnJ16L7yqmaTxpTZVBRuMIJ9pdyfWyQ26GG5.jpg') }}"
+            <img src="{{ asset('assets/img/DEJJSnJ16L7yqmaTxpTZVBRuMIJ9pdyfWyQ26GG5.jpg') }}"
                  alt="Gedung FPEB UPI"
                  class="w-full h-full object-cover"
                  onerror="this.src='https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1600&q=80'">
