@@ -20,7 +20,7 @@
             "dest": "/public/storage/$1"
         },
         {
-            "src": "^/(favicon\.ico|robots\.txt)$",
+            "src": "^/(favicon\\.ico|robots\\.txt)$",
             "dest": "/public/$1"
         },
         {
