@@ -24,4 +24,21 @@ class DashboardController extends Controller
 
         return view('admin.dashboard', compact('stats', 'recentBookings'));
     }
+
+    public function prodiIndex()
+    {
+        $stats = [
+            'bookings' => Booking::where('prodi', auth()->user()->prodi)->count(),
+            'pending' => Booking::where('prodi', auth()->user()->prodi)->where('status', 'pending')->count(),
+            'rooms' => Room::count(),
+        ];
+
+        $recentBookings = Booking::with(['user', 'room'])
+            ->where('prodi', auth()->user()->prodi)
+            ->latest()
+            ->take(5)
+            ->get();
+
+        return view('prodi.dashboard', compact('stats', 'recentBookings'));
+    }
 }

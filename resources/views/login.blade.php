@@ -49,7 +49,7 @@
                 </p>
                 <p class="text-gray-500 mt-1">Please login to your account</p>
 
-                <form class="mt-8 space-y-5" action="{{ route('login.post') }}" method="POST">
+                <form class="mt-8 space-y-5" action="/login" method="POST">
     @csrf <div>
         <label for="email" class="sr-only">Email</label>
         <input id="email" name="email" type="email" placeholder="Email" required

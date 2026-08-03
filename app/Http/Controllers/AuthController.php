@@ -16,9 +16,14 @@ class AuthController extends Controller
     {
         if (Auth::check()) {
             $user = Auth::user();
-            if ($user->role === 'admin' || $user->role === 'prodi') {
+            if ($user->role === 'admin') {
                 return redirect()->route('admin.dashboard');
             }
+
+            if (in_array($user->role, ['prodi', 'dosen'], true)) {
+                return redirect()->route('prodi.dashboard');
+            }
+
             return redirect()->route('rooms.index');
         }
 
@@ -37,18 +42,15 @@ class AuthController extends Controller
 
             $user = Auth::user();
 
-            // Cek role untuk mengarahkan halaman
-            // Contoh di dalam method login() AuthController.php
+            if ($user->role === 'admin') {
+                return redirect()->route('admin.dashboard');
+            }
 
-if (auth()->user()->role === 'admin') {
-    return redirect()->route('admin.dashboard');
-} elseif (auth()->user()->role === 'prodi') {
-    return redirect()->route('prodi.dashboard'); // Pastikan ini mengarah ke route prodi.dashboard
-} else {
-    return redirect()->route('rooms.index'); // Untuk user biasa
-}
+            if (in_array($user->role, ['prodi', 'dosen'], true)) {
+                return redirect()->route('prodi.dashboard');
+            }
 
-            return redirect()->intended('/dashboard');
+            return redirect()->route('rooms.index');
         }
 
         return back()->withErrors([

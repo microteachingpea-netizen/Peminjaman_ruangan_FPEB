@@ -24,7 +24,7 @@ class UserSeeder extends Seeder
             [
                 'name' => 'Prodi Pendidikan Ekonomi',
                 'password' => 'password123',
-                'role' => 'dosen',
+                'role' => 'prodi',
                 'prodi' => 'Pendidikan Ekonomi',
             ]
         );
