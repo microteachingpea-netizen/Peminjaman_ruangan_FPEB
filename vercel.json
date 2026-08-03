@@ -28,13 +28,12 @@
             "dest": "/api/index.php"
         }
     ],
-    "buildCommand": "composer install --no-dev --optimize-autoloader && php artisan storage:link || true && vite build",
+    "buildCommand": "npm run build",
     "outputDirectory": "public",
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "false",
         "APP_KEY": "base64:TGaVaXwhWgjn9akhE4SCSIjGG/cQqvICUQ+PgLA3Bs0=",
-        "APP_URL": "https://peminjamanruangan.vercel.app",
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
         "APP_PACKAGES_CACHE": "/tmp/packages.php",
@@ -51,6 +50,8 @@
         "DB_DATABASE": "test",
         "DB_USERNAME": "2MTwzzzAgVzkrYT.root",
         "DB_PASSWORD": "6Wb6cg2WZH91ONBZ",
-        "MYSQL_ATTR_SSL_CA": ""
+        "MYSQL_ATTR_SSL_CA": "",
+        "APP_URL": "https://peminjaman-ruangan-fpeb-kx5v-1akep7jzd.vercel.app",
+        "ASSET_URL": "https://peminjaman-ruangan-fpeb-kx5v-1akep7jzd.vercel.app"
     }
 }
